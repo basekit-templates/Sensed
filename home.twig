@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+{% block class %}bk-pt-home{% endblock %}
+{% block content %}
+
+    <div class="home-container">
+        <!-- Blog posts list Widget -->
+        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Page Content -->
+        <section class="template-content">
+
+            <!-- Main Widget Zone -->
+            {{zone('main')|raw}}
+
+        </section>
+        <!-- End Page Content -->
+
+    </div>
+    <!-- End Container -->
+
+{% endblock %}
+
+
+

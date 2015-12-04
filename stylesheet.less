@@ -1,0 +1,469 @@
+// ---------------------
+// BasePlate main styles
+// ---------------------
+
+// Template Imports
+// ----------------
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+
+@import "@{templateLocal}/less/variables.less";         // Variables
+
+@import "@{templateLocal}/less/widget-gallery.less";    // Gallery Widget
+@import "@{templateLocal}/less/widget-slideshow.less";  // Slideshow Widget
+
+@import "@{templateLocal}/less/forms-and-buttons.less"; // Forms and Buttons
+
+@import "@{templateLocal}/less/header-style.less";
+
+@import "@{templateLocal}/less/plugin-blog.less";       // Plugins
+@import "@{templateLocal}/less/plugin-menu.less";
+@import "@{templateLocal}/less/plugin-ecommerce.less";
+
+@import "@{templateLocal}/less/mixins.less";
+
+
+
+// Template Styles
+// ---------------
+
+// Feature - Variables needed for V8
+@color__feature-headline--text: @font-swatch8-color;
+@color__feature-strapline--text: @font-swatch9-color;
+@color__feature-button--text: @font-swatch7-color;
+@color__feature-button--background: @color__secondary;
+@color__feature-button--background--hover: darken(@color__secondary, 10%);
+@font__feature-headline--font-family : @font-swatch8-font-family;
+@font__feature-headline--font-size : @font-swatch8-font-size;
+@font__feature-headline--font-weight : @font-swatch8-font-weight;
+@font__feature-headline--line-height: @font-swatch8-line-height;
+@font__feature-headline--letter-spacing : @font-swatch8-letter-spacing;
+@font__feature-strapline--font-family : @font-swatch9-font-family;
+@font__feature-strapline--font-size: @font-swatch9-font-size;
+@font__feature-strapline--font-weight : @font-swatch9-font-weight;
+@font__feature-strapline--line-height : @font-swatch9-line-height;
+@font__feature-strapline--letter-spacing : @font-swatch9-letter-spacing;
+
+
+// -----------------------------
+// Links
+// -----------------------------
+
+a {
+    .transition( all, 0.5s, ease );
+}
+
+
+// -----------------------------
+// Widgets
+// -----------------------------
+
+.container .widget {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 10px auto;
+    }
+}
+
+// Widgets in Responsive Columns
+.container {
+    // Two Columns
+    .columns-two-left,
+    .columns-two-right,
+    // Three Columns
+    .columns-three-left,
+    .columns-three-middle,
+    .columns-three-right,
+    // Four Columns
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .widget {
+            width: auto;
+            margin: 10px 0;
+            @media only screen and (min-width: 1140px) {
+                width: auto;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+
+// -----------------------------
+// Tag link
+// -----------------------------
+
+.tag-link:after {
+    content: "\002C";
+}
+
+.tag-item:last-child .tag-link:after {
+    content: "";
+}
+
+
+
+
+// -----------------------------
+// Content Widget
+// -----------------------------
+
+@media @mobile {
+    h1 {
+        font-size: bkscale(@font__h1--font-size,0.8);
+        line-height: bkscale(@font__h1--line-height,0.8);
+    }
+    h2 {
+        font-size: bkscale(@font__h2--font-size,0.8);
+        line-height: bkscale(@font__h2--line-height,0.8);
+    }
+    h3 {
+        font-size: bkscale(@font__h3--font-size,0.9);
+        line-height: bkscale(@font__h3--line-height,0.9);
+    }
+    h4 {
+        font-size: bkscale(@font__h4--font-size,0.9);
+        line-height: bkscale(@font__h4--line-height,0.9);
+    }
+    p {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+}
+
+
+
+
+// -----------------------------
+// Blockquote
+// -----------------------------
+
+.content blockquote {
+    position: relative;
+    quotes: "“" "”" "“" "”";
+    margin-right: 5%;
+    margin-left: 16%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-left: 3px solid @color__primary;
+    @media @mobile {
+        margin-right: 0;
+    }
+    &:before {
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        margin-top: -17px;
+        font-size: 30px;
+        line-height: 50px;
+        margin-right: 5px;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        color: @color-swatch7;
+        background-color: @color__primary;
+        @media @mobile {
+            left: -45px;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Twitter Feed
+// -----------------------------
+
+.twitter .tweet-item {
+    p {
+        padding-bottom: 0;
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    .avatar {
+        max-width: 16%;
+        margin-right: 15px;
+        @media @mobile {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+    }
+    .avatar-image {
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+    }
+    .tweet-wrap {
+        max-width: 77%;
+        padding-left: 15px;
+        border-left: 3px solid @color__primary;
+        @media @mobile {
+            padding-left: 0;
+            border: none;
+            margin: 0 auto;
+        }
+    }
+    .avatar,
+    .tweet-wrap {
+        display: inline-block;
+        vertical-align: middle;
+        @media @mobile {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .account-link {
+        font-family: @font__h3--font-family;
+        color: @color__primary;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+    }
+    .tweet-metadata {
+        font-size: 90%;
+        .timestamp, .via {
+            color: lighten(@color-swatch5, 15%)
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+// Three Columns on Tablet
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .twitter .tweet-item {
+        .avatar {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .tweet-wrap {
+            padding-left: 0;
+            border: none;
+            margin: 0 auto;
+        }
+        .avatar,
+        .tweet-wrap {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .twitter .tweet-item {
+        .avatar {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .tweet-wrap {
+            padding-left: 0;
+            border: none;
+            margin: 0 auto;
+        }
+        .avatar,
+        .tweet-wrap {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Profile Widget: Twitter
+// -----------------------------
+
+.profile .twitter .tweet-item {
+    text-align: center;
+    .avatar {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .avatar-link {
+        display: block;
+        max-width: 48px;
+        margin: 0 auto;
+    }
+    .avatar-image {
+        margin: 0 auto;
+    }
+    .tweet-wrap {
+        padding-left: 0;
+        border: none;
+        margin: 0 auto;
+    }
+    .avatar,
+    .tweet-wrap {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+
+
+// -----------------------------
+// Map Widget
+// -----------------------------
+
+.map {
+    border: 1px solid darken(@color__body--background, 8%);
+}
+
+
+
+
+
+// -----------------------------
+// Click to Call Widget
+// -----------------------------
+
+.clicktocall {
+    a:hover {
+        text-decoration: none;
+        cursor: text;
+    }
+    @media @mobile {
+        .phone-number-link {
+            width: 100%;
+            padding: 8px 20px;
+            text-align: center;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+        .label {
+            color: @font-swatch7-color;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Dropbox Label
+// -----------------------------
+
+.dropbox .label {
+    margin-left: 10px;
+}
+
+
+
+
+// -----------------------------
+// Image Widget
+// -----------------------------
+
+.imagewidget {
+    .image-title {
+        font-family:@font-swatch8-font-family;
+        font-size:@font-swatch8-font-size;
+        font-weight: @font-swatch8-font-weight;
+        line-height:@font-swatch8-line-height;
+        color: @color__image-title--text;
+        letter-spacing: @font-swatch8-letter-spacing;
+    }
+    .image-description {
+        font-family:@font-swatch9-font-family;
+        font-size:@font-swatch9-font-size;
+        font-weight: @font-swatch9-font-weight;
+        line-height:@font-swatch9-line-height;
+        color: @color__image-description--text;
+        letter-spacing: @font-swatch9-letter-spacing;
+    }
+}
+
+
+
+
+// -----------------------------
+// Divider (Keyline)
+// -----------------------------
+
+hr.rule {
+    height: 1px;
+    background-color: darken(@color__body--background, 8%);
+}
+
+
+// Horizontal rule in blog posts
+hr {
+    height: 3px;
+    border: 0;
+    margin-bottom: 18px;
+    background-color: darken(@color-swatch7, 5%);
+}
+
+
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+.template-footer {
+    padding: 30px 0;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid darken(@color__body--background, 8%);
+}
+
+
+
+
+// -----------------------------
+// Profile Widget
+// -----------------------------
+
+.template-footer .profile {
+    .address p {
+        padding-bottom: 0;
+    }
+    .headline,
+    .strapline,
+    .description {
+        @media @mobile {
+            font-size: @font__p--font-size;
+            font-weight: @font__p--font-weight;
+            line-height: @font__p--line-height;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Yelp
+// -----------------------------
+
+
+.yelpreview ul {
+    list-style: none;
+    margin: 16px 0;
+}
