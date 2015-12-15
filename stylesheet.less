@@ -550,3 +550,39 @@ hr {
         }
     }
 }
+
+
+
+
+// ----------------------------------------------
+// Header First Row: Nav and Click to Call Widget
+// ----------------------------------------------
+
+.flex-click-to-call .template-header .clicktocall .phone-number-link {
+    white-space: nowrap;
+    .label {
+        color: @color__navigation--text;
+        background-color: transparent;
+        @media screen and (max-width: 854px) {
+            color: @color__navigation--text;
+        }
+        @media @mobile {
+            display: none;
+        }
+    }
+    &:before {
+        color: @color__navigation--text;
+    }
+    @media screen and (max-width: 854px) {
+        padding: 0;
+        line-height: 44px;
+        background-color: transparent;
+    }
+    @media @mobile {
+        text-align: right;
+        &:before {
+            color: @color__navigation--text;
+            font-size: 20px;
+        }
+    }
+}

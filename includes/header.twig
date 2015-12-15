@@ -3,14 +3,13 @@
 <div class="flex-container">
 
     <div class="tablet-top-bar"></div>
-    <div class="flex-item flex-social">
-        {{widget('socialicons', 'socialnetworks', {
-        'googleplus': 'https://plus.google.com/101946323226233111530',
-        'linkedin':'http://www.linkedin.com/company/mycompanyname',
-        'facebook': 'https://www.facebook.com/mycompanyname',
-        'twitter': 'https://twitter.com/mycompanyname',
-        'youtube': 'https://www.youtube.com/user/mycompanyname',
-        'rss': 'http://news.bbc.co.uk/1/hi/help/rss/default.stm'
+    <div class="flex-item flex-click-to-call">
+        {{widget('clicktocall', 'headerclicktocall', {
+        'phoneText': '012 3456 789',
+        'italic': false,
+        'bold': true,
+        'fontSize': 16,
+        'align': 'widget-align-right'
         })|raw}}
     </div>
     <div class="flex-item flex-nav">
