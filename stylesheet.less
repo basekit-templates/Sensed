@@ -26,23 +26,6 @@
 // Template Styles
 // ---------------
 
-// Feature - Variables needed for V8
-@color__feature-headline--text: @font-swatch8-color;
-@color__feature-strapline--text: @font-swatch9-color;
-@color__feature-button--text: @font-swatch7-color;
-@color__feature-button--background: @color__secondary;
-@color__feature-button--background--hover: darken(@color__secondary, 10%);
-@font__feature-headline--font-family : @font-swatch8-font-family;
-@font__feature-headline--font-size : @font-swatch8-font-size;
-@font__feature-headline--font-weight : @font-swatch8-font-weight;
-@font__feature-headline--line-height: @font-swatch8-line-height;
-@font__feature-headline--letter-spacing : @font-swatch8-letter-spacing;
-@font__feature-strapline--font-family : @font-swatch9-font-family;
-@font__feature-strapline--font-size: @font-swatch9-font-size;
-@font__feature-strapline--font-weight : @font-swatch9-font-weight;
-@font__feature-strapline--line-height : @font-swatch9-line-height;
-@font__feature-strapline--letter-spacing : @font-swatch9-letter-spacing;
-
 
 // -----------------------------
 // Links
@@ -499,18 +482,20 @@ hr {
         background-color: rgba(0,0,0,0.1);
     }
     .headline {
-        font-family: @font-swatch8-font-family;
-        color: @font-swatch8-color;
-        font-size: @font-swatch8-font-size;
-        font-weight: @font-swatch8-font-weight;
-        line-height: @font-swatch8-line-height;
+        font-family: @font__feature-headline--font-family;
+        color: @color__feature-headline--text;
+        font-size: @font__feature-headline--font-size;
+        font-weight: @font__feature-headline--font-weight;
+        line-height: @font__feature-headline--line-height;
+        letter-spacing: @font__feature-headline--letter-spacing;
     }
     .strapline {
-        font-family: @font-swatch9-font-family;
-        color: @font-swatch9-color;
-        font-size: @font-swatch9-font-size;
-        font-weight: @font-swatch9-font-weight;
-        line-height: @font-swatch9-line-height;
+        font-family: @font__feature-strapline--font-family;
+        color: @color__feature-strapline--text;
+        font-size: @font__feature-strapline--font-size;
+        font-weight: @font__feature-strapline--font-weight;
+        line-height: @font__feature-strapline--line-height;
+        letter-spacing: @font__feature-strapline--letter-spacing;
     }
     .button {
         margin: 1em 0;
@@ -530,12 +515,12 @@ hr {
             height: 350px;
         }
         .headline {
-            font-size: bkscale(@font-swatch8-font-size, .8);
-            line-height: bkscale(@font-swatch8-line-height, .8);
+            font-size: bkscale(@font__feature-headline--font-size, .8);
+            line-height: bkscale(@font__feature-headline--line-height, .8);
         }
         .strapline {
-            font-size: bkscale(@font-swatch9-font-size, .9);
-            line-height: bkscale(@font-swatch9-line-height, .9);
+            font-size: bkscale(@font__feature-strapline--font-size, .9);
+            line-height: bkscale(@font__feature-strapline--line-height, .9);
         }
     }
 }
@@ -552,12 +537,17 @@ hr {
             padding: 15px;
         }
         .headline {
-            font-size: bkscale(@font-swatch8-font-size, .6);
-            line-height: bkscale(@font-swatch8-line-height, .6);
+            font-size: bkscale(@font__feature-headline--font-size, .6);
+            line-height: bkscale(@font__feature-headline--line-height, .6);
         }
         .strapline {
-            font-size: bkscale(@font-swatch9-font-size, .8);
-            line-height: bkscale(@font-swatch9-line-height, .8);
+            font-size: bkscale(@font__feature-strapline--font-size, .8);
+            line-height: bkscale(@font__feature-strapline--line-height, .8);
         }
     }
 }
+
+// Feature - Variables needed for V8
+
+@color__feature-button--text: @color-swatch7;
+@color__feature-button--background: @color-swatch7;
