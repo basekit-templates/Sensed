@@ -564,14 +564,14 @@ hr {
         color: @color__navigation--text;
         background-color: transparent;
         @media screen and (max-width: 854px) {
-            color: @color__navigation--text;
+            color: lighten(@color__navigation--text--selected, 40%);
         }
         @media @mobile {
             display: none;
         }
     }
     &:before {
-        color: @color__navigation--text;
+        color: lighten(@color__navigation--text--selected, 40%);
     }
     @media screen and (max-width: 854px) {
         padding: 0;
@@ -579,7 +579,7 @@ hr {
         background-color: transparent;
     }
     @media @mobile {
-        text-align: right;
+        text-align: left;
         &:before {
             color: @color__navigation--text;
             font-size: 20px;
