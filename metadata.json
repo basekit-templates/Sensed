@@ -232,7 +232,7 @@
         "feature": {
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
-            "color__feature-button--text": "@color__button--text",
+            "color__feature-button--text": "@font-swatch8-color",
 
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "@font-swatch8-font-size",
