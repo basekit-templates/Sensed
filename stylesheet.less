@@ -563,7 +563,7 @@ hr {
     .label {
         color: @color__navigation--text;
         background-color: transparent;
-        @media screen and (max-width: 854px) {
+        @media @tablet {
             color: lighten(@color__navigation--text--selected, 40%);
         }
         @media @mobile {
@@ -571,17 +571,19 @@ hr {
         }
     }
     &:before {
-        color: lighten(@color__navigation--text--selected, 40%);
+        color: @color__navigation--text;
     }
-    @media screen and (max-width: 854px) {
+    @media @tablet {
         padding: 0;
         line-height: 44px;
         background-color: transparent;
+        &:before {
+            color: lighten(@color__navigation--text--selected, 40%);
+        }
     }
     @media @mobile {
         text-align: left;
         &:before {
-            color: @color__navigation--text;
             font-size: 20px;
         }
     }
