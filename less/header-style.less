@@ -33,12 +33,7 @@
     -ms-flex-align: center;
     align-items: center;
     @media @tablet {
-        padding: 0;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        padding: 5%;
     }
 }
 // Global style for flex items
@@ -48,11 +43,6 @@
     align-self: auto;
     margin-bottom: 10px;
     @media @tablet {
-        -webkit-box-ordinal-group: 1;
-        -moz-box-ordinal-group: 1;
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
         margin-bottom: 0;
     }
     // Reorder items for desktop
@@ -102,27 +92,6 @@
         .navigation-toggle {
             height: 44px;
         }
-    }
-}
-
-// Spacing for logo and company name on tablet and mobile
-
-@media @tablet {
-    .flex-logo {
-        margin-top: 30px;
-        width: 100%;
-        text-align: center;
-        .logo-image {
-            padding: 0 5%;
-            margin: 0 auto;
-        }
-    }
-    .flex-companyname {
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 30px;
-        text-align: center;
     }
 }
 
@@ -183,8 +152,8 @@
         display: inline-block;
         position: absolute;
         height: 44px;
-        width: 40px;
-        right: 5%;
+        width: 44px;
+        right: 0;
         top: 0;
         text-indent: 1000px;
         overflow: hidden;
@@ -193,7 +162,7 @@
         &:before {
             content: '';
             position: absolute;
-            width: 40px;
+            width: 27px;
             height: 3px;
             top: 0;
             left: 50%;
@@ -207,7 +176,7 @@
         &:after {
             content: '';
             position: absolute;
-            width: 40px;
+            width: 27px;
             height: 3px;
             top: 14px;
             left: 50%;
@@ -288,7 +257,6 @@
 .navigation-list--children {
     @media @tablet {
         background-color: @color-swatch4;
-        border-top: 1px solid lighten(@color-swatch4, 10%);
     }
 }
 .navigation-list--children {
