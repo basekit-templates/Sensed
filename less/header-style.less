@@ -108,6 +108,7 @@ div#page-zones__template-widgets__feature-featurehome {
     z-index: 0;
 }
 
+
 div#page-zones__template-widgets__feature-featurehome + .flex-container {
     position: absolute;
     top: 0;
@@ -117,18 +118,10 @@ div#page-zones__template-widgets__feature-featurehome + .flex-container {
     margin-bottom: 0;
 }
 
-
-
-
-// ------------------
-// Default Page
-// ------------------
-
-.bk-pt-default .default-header-bottom-line {
-        height: 1px;
-        width: 100%;
-        background-color: darken(@color__body--background, 8%);
-        margin-bottom: 30px;
+.bk-tpl-hidden + .flex-container {
+    position: relative;
+    border-bottom: 1px solid darken(@color__body--background, 8%);
+    margin-bottom: 30px;
 }
 
 
