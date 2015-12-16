@@ -117,6 +117,22 @@ div#page-zones__template-widgets__feature-featurehome + .flex-container {
     z-index: 9999;
     border-bottom: none;
     margin-bottom: 0;
+    .company-link {
+        color: @color-swatch3;
+    }
+    .extendednavigation__item-name.item-name {
+        color: @color__navigation--text;
+        &:hover {
+            color: @color__navigation--text--hover;
+        }
+    }
+    .navigation-item.selected .item-name {
+        color: @color__navigation--text--selected;
+    }
+    .navigation-list--children {
+        background-color: @color__body--background;
+    }
+
 }
 
 div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-container {
@@ -313,7 +329,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         padding-bottom: 8px;
         padding-left: 5%;
         padding-right: 5%;
-        color: @color-swatch7;
+        color: @color__navigation--text;
         &:hover {
             color: lighten(@color-swatch4, 40%);
         }
