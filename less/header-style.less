@@ -93,6 +93,7 @@
         width: 100%;
         .navigation-toggle {
             height: 44px;
+            top: -44px;
         }
     }
 }
@@ -122,6 +123,12 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     position: relative;
     border-bottom: 1px solid darken(@color__body--background, 8%);
     margin-bottom: 30px;
+    .company-link {
+        color: @color-swatch3;
+    }
+    .extendednavigation__item-name.item-name {
+        color: @color-swatch4;
+    }
 }
 
 
@@ -174,7 +181,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         &:before {
             content: '';
             position: absolute;
-            width: 27px;
+            width: 26px;
             height: 3px;
             top: 0;
             left: 50%;
@@ -188,7 +195,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         &:after {
             content: '';
             position: absolute;
-            width: 27px;
+            width: 26px;
             height: 3px;
             top: 14px;
             left: 50%;
@@ -219,7 +226,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         &:before {
             width: 26px;
             margin-top: 21px;
-            margin-left: -4px;
+            margin-left: -13px;
             background: @color__body--background;
             box-shadow: none;
             -webkit-transform: rotate(45deg);
@@ -238,7 +245,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
             left: 50%;
             right: 0;
             margin-top: 21px;
-            margin-left: -4px;
+            margin-left: -13px;
             background: @color__body--background;
             box-shadow: none;
             -webkit-transform: rotate(-45deg);
