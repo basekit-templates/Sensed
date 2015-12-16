@@ -466,7 +466,7 @@ hr {
     .background-image,
     .content-wrap {
         min-height: 500px;
-        height: 80vh;
+        height: 92vh;
     }
     .background-image {
         display: table;
@@ -554,37 +554,39 @@ hr {
 
 
 
-// ----------------------------------------------
-// Header First Row: Nav and Click to Call Widget
-// ----------------------------------------------
 
-.flex-click-to-call .clicktocall .phone-number-link {
-    white-space: nowrap;
-    .label {
-        color: @color__navigation--text;
-        background-color: transparent;
-        @media @tablet {
-            color: lighten(@color__navigation--text--selected, 40%);
-        }
-        @media @mobile {
-            display: none;
-        }
-    }
-    &:before {
-        color: @color__navigation--text;
-    }
+// -------------------
+// Social Icons Widget
+// -------------------
+
+.social-name {
+    display: none;
+}
+
+.social-item {
+    margin-right: 0;
+}
+
+.social-link {
+    padding: 5px;
+}
+
+// Social icons colour
+.social-link:before {
+    color: @color__socialicons--icon;
+    font-size: 16px;
+    margin-right: 10px;
     @media @tablet {
-        padding: 0;
-        line-height: 44px;
-        background-color: transparent;
-        &:before {
-            color: lighten(@color__navigation--text--selected, 40%);
-        }
+        font-size: 18px;
     }
-    @media @mobile {
-        text-align: left;
-        &:before {
-            font-size: 20px;
+}
+
+.social-link:hover {
+    text-decoration: none;
+    &:before {
+        color: @color__secondary;
+        @media @tablet {
+            color: lighten(@color-swatch4, 40%);
         }
     }
 }
