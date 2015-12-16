@@ -1,5 +1,20 @@
 {% extends "layout.twig" %}
 {% block class %}bk-pt-home{% endblock %}
+
+<!-- Theme Feature Widget -->
+
+{{widget('feature', 'featurehome', {
+    "header": "profile",
+    "defaultBgImg": asset('images/feature-bg.jpg'),
+    'positionTopPercentage': '0',
+    'showBtn': false,
+    buttonText: "Lorem Ipsum"
+})|raw}}
+
+<!-- Header Include -->
+
+{% include "includes/header.twig" %}
+
 {% block content %}
 
     <!-- Container -->
