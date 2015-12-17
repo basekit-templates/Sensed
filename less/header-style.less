@@ -154,7 +154,9 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 // Navigation
 // ----------
 
-// Parent nav items, adds arrow icon
+
+
+// Folder, adds arrow icon
 .item-name--parent:after {
     display: inline-block;
     vertical-align: middle;
@@ -235,44 +237,6 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 }
 
 
-// Toggle Button Open State
-.open & {
-    &.navigation-toggle {
-        background-color: transparent;
-        &:before {
-            width: 26px;
-            margin-top: 21px;
-            margin-left: -13px;
-            background: @color__body--background;
-            box-shadow: none;
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-            .transition( all, 0.5s, ease );
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 26px;
-            height: 3px;
-            top: 0;
-            left: 50%;
-            right: 0;
-            margin-top: 21px;
-            margin-left: -13px;
-            background: @color__body--background;
-            box-shadow: none;
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            .transition( all, 0.5s, ease );
-        }
-    }
-}
 
 // Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
 .navigation-list {
@@ -281,30 +245,16 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     @media @tablet {
         display: none;
         width: 100%;
-        &.open {
-            display: block;
-        }
     }
 }
 
 // Sets background colour to navigation and dropdowns
-.extendednavigation,
-.navigation-list--children {
-    @media @tablet {
-        background-color: @color-swatch4;
-    }
-}
+
 .navigation-list--children {
     left: inherit;
     right: 0;
     white-space: normal;
     border: 1px solid darken(@color__body--background, 10%);
-    @media @tablet {
-        border-top: 1px solid lighten(@color-swatch4, 10%);
-        border-bottom: 1px solid lighten(@color-swatch4, 10%);
-        border-right: none;
-        border-left: none;
-    }
     .navigation-item--child {
         @media only screen and (min-width:770px) {
             border-bottom: 1px solid darken(@color__body--background, 5%);
@@ -315,25 +265,8 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     }
 }
 
-// Sets nav items to full width on mobile and tablet
-.navigation-item {
-    @media @tablet {
-        display: block;
-    }
-}
-
 .extendednavigation .item-name {
     padding: 4px 12px;
-    @media @tablet {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 5%;
-        padding-right: 5%;
-        color: @color__navigation--text;
-        &:hover {
-            color: lighten(@color-swatch4, 40%);
-        }
-    }
 }
 
 // Fix overlay in editor on tablet and mobile
@@ -348,6 +281,73 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 }
 
 
+
+
+@keyframes bar1 {
+    0% { top: 13px;}
+    50% { top: 23px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+    100% {top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);   }
+}
+
+@-webkit-keyframes bar1 {
+    0% { top: 13px;}
+    50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    100% {  }
+}
+
+@keyframes bar2 {
+    0% { bottom: 13px;}
+    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+    100% {}
+}
+
+@-webkit-keyframes bar2 {
+    0% { bottom: 13px;}
+    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    100% {}
+}
+
+
+
+
+// -----------------------------
+// Animations
+// -----------------------------
+
+
+// Transitions
+// -------------------
+
+.transition(@duration:0.2s, @ease:ease-in-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+
+// Enabling HW acceleration in WebKit
+// ----------------------------------
+
+
+.animation {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+
+// -----------------------------
+// Transform
+// -----------------------------
+
+.transform(@x:0, @y:0) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
 
 
 // --------------
