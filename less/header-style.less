@@ -182,6 +182,99 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 }
 
 
+
+// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
+.navigation-list {
+    margin: 0;
+    width: auto;
+    @media @tablet {
+        display: none;
+        width: 100%;
+    }
+}
+
+// Sets background colour to navigation and dropdowns
+
+.navigation-list--children {
+    left: inherit;
+    right: 0;
+    white-space: normal;
+    border: 1px solid darken(@color__body--background, 10%);
+    .navigation-item--child {
+        @media only screen and (min-width:770px) {
+            border-bottom: 1px solid darken(@color__body--background, 5%);
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.extendednavigation .item-name {
+    padding: 4px 12px;
+}
+
+// Fix overlay in editor on tablet and mobile
+
+div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
+    @media @tablet {
+        width: 30%;
+        height: 44px;
+        top: -44px !important;
+        left: inherit !important;
+    }
+}
+
+
+
+
+// -----------------------------
+// Nav in Tablet & Mobile
+// -----------------------------
+
+.navigation-list {
+    @media @tablet {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        .transform(@y:-100%, @x:0);
+        transition-duration: 0.4s;
+
+
+        z-index: 2;
+
+        padding: 150px 100px;
+        background-color: @color-swatch4;
+
+        // Allows scrolling on mobile
+        &.open {
+            overflow: auto;
+        }
+    }
+    @media @mobile {
+        padding: 90px 0 0 0;
+    }
+}
+
+
+// Hides navigation until toggled
+.navigation-list {
+    &.open {
+        display: block;
+    }
+}
+
+.navigation-list.open .navigation-item:hover .navigation-list--children {
+    height: auto;
+    padding: 0;
+    position: relative;
+    opacity: 1;
+    .transform(@x:0, @y:0);
+    visibility: visible;
+}
+
 // Hide toggle on desktop
 .navigation-toggle {
     display: none;
@@ -235,52 +328,6 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         }
     }
 }
-
-
-
-// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
-.navigation-list {
-    margin: 0;
-    width: auto;
-    @media @tablet {
-        display: none;
-        width: 100%;
-    }
-}
-
-// Sets background colour to navigation and dropdowns
-
-.navigation-list--children {
-    left: inherit;
-    right: 0;
-    white-space: normal;
-    border: 1px solid darken(@color__body--background, 10%);
-    .navigation-item--child {
-        @media only screen and (min-width:770px) {
-            border-bottom: 1px solid darken(@color__body--background, 5%);
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-    }
-}
-
-.extendednavigation .item-name {
-    padding: 4px 12px;
-}
-
-// Fix overlay in editor on tablet and mobile
-
-div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
-    @media @tablet {
-        width: 30%;
-        height: 44px;
-        top: -44px !important;
-        left: inherit !important;
-    }
-}
-
-
 
 
 @keyframes bar1 {
