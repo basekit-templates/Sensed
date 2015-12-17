@@ -241,7 +241,6 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         height: 100vh;
         width: 100%;
         .transform(@y:-100%, @x:0);
-        transition-duration: 0.4s;
 
 
         z-index: 2;
@@ -256,6 +255,12 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     }
     @media @mobile {
         padding: 90px 0 0 0;
+    }
+}
+
+.navigation-list {
+    @media only screen and (min-width:768px) {
+        transition-duration: 0.4s;
     }
 }
 
