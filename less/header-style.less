@@ -180,271 +180,107 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 }
 
 
-// // Hide toggle on desktop
-// .navigation-toggle {
-//     display: none;
-//     @media @tablet {
-//         display: inline-block;
-//         position: absolute;
-//         height: 44px;
-//         width: 44px;
-//         right: 0;
-//         top: 0;
-//         text-indent: 1000px;
-//         overflow: hidden;
-//         line-height: 0;
-//         background-color: transparent;
-//         &:before {
-//             content: '';
-//             position: absolute;
-//             width: 26px;
-//             height: 3px;
-//             top: 0;
-//             left: 50%;
-//             right: 0;
-//             margin-top: 15px;
-//             margin-left: -13px;
-//             background: @color-swatch7;
-//             box-shadow: 0 7px 0 @color-swatch7;
-//             .transition( all, 0.5s, ease );
-//         }
-//         &:after {
-//             content: '';
-//             position: absolute;
-//             width: 26px;
-//             height: 3px;
-//             top: 14px;
-//             left: 50%;
-//             right: 0;
-//             margin-top: 15px;
-//             margin-left: -13px;
-//             background: @color-swatch7;
-//             .transition( all, 0.5s, ease );
-//         }
-//     }
-//     &:hover {
-//         background-color: @color-swatch4;
-//         &:before {
-//             background: lighten(@color-swatch4, 40%);
-//             box-shadow: 0 7px 0 lighten(@color-swatch4, 40%);
-//         }
-//         &:after {
-//             background: lighten(@color-swatch4, 40%);
-//         }
-//     }
-// }
-
-
-// // Toggle Button Open State
-// .open & {
-//     &.navigation-toggle {
-//         background-color: transparent;
-//         &:before {
-//             width: 26px;
-//             margin-top: 21px;
-//             margin-left: -13px;
-//             background: @color__body--background;
-//             box-shadow: none;
-//             -webkit-transform: rotate(45deg);
-//             -moz-transform: rotate(45deg);
-//             -o-transform: rotate(45deg);
-//             -ms-transform: rotate(45deg);
-//             transform: rotate(45deg);
-//             .transition( all, 0.5s, ease );
-//         }
-//         &:after {
-//             content: '';
-//             position: absolute;
-//             width: 26px;
-//             height: 3px;
-//             top: 0;
-//             left: 50%;
-//             right: 0;
-//             margin-top: 21px;
-//             margin-left: -13px;
-//             background: @color__body--background;
-//             box-shadow: none;
-//             -webkit-transform: rotate(-45deg);
-//             -moz-transform: rotate(-45deg);
-//             -o-transform: rotate(-45deg);
-//             -ms-transform: rotate(-45deg);
-//             transform: rotate(-45deg);
-//             .transition( all, 0.5s, ease );
-//         }
-//     }
-// }
-
-
-
-
-// Navigation Toggle
-// -----------------
-
-
-// This adds the yellow background to the nav at mobile
-.extendednavigation:after {
-    content: "";
-    padding: 20px 24px;
-    position: absolute;
-    top: 14px;
-    left: 0;
-    background-color: transparent;
-    z-index: -1;
-
+// Hide toggle on desktop
+.navigation-toggle {
+    display: none;
+    @media @tablet {
+        display: inline-block;
+        position: absolute;
+        height: 44px;
+        width: 44px;
+        right: 0;
+        top: 0;
+        text-indent: 1000px;
+        overflow: hidden;
+        line-height: 0;
+        background-color: transparent;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch7;
+            box-shadow: 0 7px 0 @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 14px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    &:hover {
+        background-color: @color-swatch4;
+        &:before {
+            background: lighten(@color-swatch4, 40%);
+            box-shadow: 0 7px 0 lighten(@color-swatch4, 40%);
+        }
+        &:after {
+            background: lighten(@color-swatch4, 40%);
+        }
+    }
 }
 
 
-.navigation-toggle {
-    .animation;
-    // Displays as icon's middle bar
-    background-color: @color-swatch4;
-    background-clip: content-box;
-    width: 50px;
-    height: 47px;
-    padding: 22px 10px;
-    position: relative;
-    margin: 5px auto;
-    text-indent: 9999px;
-    overflow: hidden;
-    display: block;
-    z-index: 99999999999;
-
-    .transition(@duration:0.2s, @ease:ease-in-out);
-
-    // Top and bottom navigation item bar
-
-    &:after,
-    &:before {
-        content: "";
-        height: 3px;
-        width: 30px;
-        position: absolute;
-        left: 10px;
-        display: block;
-        background: @color-swatch4;
-        margin-right: 0;
-        margin-left: 0;
-        -webkit-transition: all 0.25s ease-in-out;
-        -moz-transition: all 0.25s ease-in-out;
-        -o-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-    }
-
-    // Top bar
-
-    &:before {
-        top: 14px;
-
-    }
-
-    // Bottom bar
-
-    &:after {
-        bottom: 14px;
-    }
-
-    &:hover {
-        background-color: @color-swatch3;
-
-        &:after, &:before {
-            background: @color-swatch3;
-        }
-    }
-
-
-    // Toggle Button open state
-    // ------------------------------
-
-    .open & {
-        background-color: fade(@color-swatch4, 0%);
-        z-index: 100000;
-        position: relative;
-
+// Toggle Button Open State
+.open & {
+    &.navigation-toggle {
+        background-color: transparent;
         &:before {
-            top: 23px;
-            background: @color-swatch7;
+            width: 26px;
+            margin-top: 21px;
+            margin-left: -13px;
+            background: @color__body--background;
+            box-shadow: none;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
             -o-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-
+            .transition( all, 0.5s, ease );
         }
         &:after {
-            bottom: 21px;
-            background: @color-swatch7;
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 21px;
+            margin-left: -13px;
+            background: @color__body--background;
+            box-shadow: none;
             -webkit-transform: rotate(-45deg);
             -moz-transform: rotate(-45deg);
             -o-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
+            .transition( all, 0.5s, ease );
         }
     }
 }
 
-
-
-@keyframes bar1 {
-    0% { top: 13px;}
-    50% { top: 23px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
-    100% {top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);   }
-}
-
-@-webkit-keyframes bar1 {
-    0% { top: 13px;}
-    50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
-    100% {  }
-}
-
-@keyframes bar2 {
-    0% { bottom: 13px;}
-    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
-    100% {}
-}
-
-@-webkit-keyframes bar2 {
-    0% { bottom: 13px;}
-    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
-    100% {}
-}
-
-
-
-
-// Navigation List
-// -------------------
-
+// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
 .navigation-list {
+    margin: 0;
+    width: auto;
     @media @tablet {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100vh;
+        display: none;
         width: 100%;
-        .transform(@y:-100%, @x:0);
-        transition-duration: 0.4s;
-
-
-        z-index: 2;
-
-        padding: 150px 100px;
-        background-color: @color-swatch4;
-
-        // Allows scrolling on mobile
-        &.open {
-            overflow: auto;
-        }
-    }
-    @media @mobile {
-        padding: 90px 0 0 0;
-    }
-}
-
-
-// Hides navigation until toggled
-.navigation-list {
-    @media @tablet {
-        margin: 0;
         &.open {
             display: block;
         }
@@ -452,12 +288,23 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 }
 
 // Sets background colour to navigation and dropdowns
-
+.extendednavigation,
+.navigation-list--children {
+    @media @tablet {
+        background-color: @color-swatch4;
+    }
+}
 .navigation-list--children {
     left: inherit;
     right: 0;
     white-space: normal;
     border: 1px solid darken(@color__body--background, 10%);
+    @media @tablet {
+        border-top: 1px solid lighten(@color-swatch4, 10%);
+        border-bottom: 1px solid lighten(@color-swatch4, 10%);
+        border-right: none;
+        border-left: none;
+    }
     .navigation-item--child {
         @media only screen and (min-width:770px) {
             border-bottom: 1px solid darken(@color__body--background, 5%);
@@ -468,38 +315,25 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     }
 }
 
-// Navigation item when nav is open
-.navigation-list.open {
-  .transform(@x:0, @y:0);
-
-  .navigation-item {
-        .transform(@x:0, @y:0);
-        display: block;
-        opacity: 1;
-  }
-}
-
-
 // Sets nav items to full width on mobile and tablet
 .navigation-item {
     @media @tablet {
-        opacity: 0;
-        .transform(@x:0, @y:5px);
-        .transition(@duration:1s, @ease:ease-in-out);
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-
-        z-index: 0;
-
-        .navigation-item:hover & {
-            display: block;
-        }
+        display: block;
     }
 }
 
 .extendednavigation .item-name {
     padding: 4px 12px;
+    @media @tablet {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 5%;
+        padding-right: 5%;
+        color: @color__navigation--text;
+        &:hover {
+            color: lighten(@color-swatch4, 40%);
+        }
+    }
 }
 
 // Fix overlay in editor on tablet and mobile
@@ -510,62 +344,6 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
         height: 44px;
         top: -44px !important;
         left: inherit !important;
-    }
-}
-
-
-
-
-// Folders
-// -------------
-
-// Parent nav items, adds arrow icon
-.item-name--parent:after {
-    @media @tablet {
-        display: inline-block;
-        vertical-align: middle;
-        content: "";
-        margin-left: 4px;
-        border: 5px solid transparent;
-        border-top-color: @color-swatch7;
-    }
-}
-
-
-.navigation-list .navigation-list--children {
-    @media @tablet {
-        padding: 0;
-        position: relative;
-        left: 50px;
-        top: 100%;
-        height: auto;
-        min-width: 100%;
-        background-color: lighten(@color-swatch4,5%);
-        white-space: nowrap;
-
-        .transform(@x:-5px, @y:0);
-        .transition(@duration:0.4s, @ease:ease-in-out);
-
-        display: block;
-        position: absolute;
-        height: 0;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-
-        left: 0;
-    }
-}
-
-
-.navigation-list.open .navigation-item:hover .navigation-list--children {
-    @media @tablet {
-        height: auto;
-        padding: 0;
-        position: relative;
-        opacity: 1;
-        .transform(@x:0, @y:0);
-        visibility: visible;
     }
 }
 
