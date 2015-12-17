@@ -279,52 +279,90 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 .navigation-toggle {
     display: none;
     @media @tablet {
-        display: inline-block;
-        position: absolute;
-        height: 44px;
-        width: 44px;
-        right: 0;
-        top: 0;
-        text-indent: 1000px;
-        overflow: hidden;
-        line-height: 0;
-        background-color: transparent;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 26px;
-            height: 3px;
-            top: 0;
-            left: 50%;
-            right: 0;
-            margin-top: 15px;
-            margin-left: -13px;
-            background: @color-swatch7;
-            box-shadow: 0 7px 0 @color-swatch7;
-            .transition( all, 0.5s, ease );
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 26px;
-            height: 3px;
-            top: 14px;
-            left: 50%;
-            right: 0;
-            margin-top: 15px;
-            margin-left: -13px;
-            background: @color-swatch7;
-            .transition( all, 0.5s, ease );
-        }
-    }
-    &:hover {
+        .animation;
+        // Displays as icon's middle bar
         background-color: @color-swatch4;
+        background-clip: content-box;
+        width: 50px;
+        height: 47px;
+        padding: 22px 10px;
+        position: relative;
+        margin: 5px auto;
+        text-indent: 9999px;
+        overflow: hidden;
+        display: block;
+        z-index: 99999999999;
+
+        .transition(@duration:0.2s, @ease:ease-in-out);
+
+        // Top and bottom navigation item bar
+
+        &:after,
         &:before {
-            background: lighten(@color-swatch4, 40%);
-            box-shadow: 0 7px 0 lighten(@color-swatch4, 40%);
+            content: "";
+            height: 3px;
+            width: 30px;
+            position: absolute;
+            left: 10px;
+            display: block;
+            background: @color-swatch4;
+            margin-right: 0;
+            margin-left: 0;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
         }
+
+        // Top bar
+
+        &:before {
+            top: 14px;
+
+        }
+
+        // Bottom bar
+
         &:after {
-            background: lighten(@color-swatch4, 40%);
+            bottom: 14px;
+        }
+
+        &:hover {
+            background-color: @color-swatch3;
+
+            &:after, &:before {
+                background: @color-swatch3;
+            }
+        }
+
+
+        // Toggle Button open state
+        // ------------------------------
+
+        .open & {
+            background-color: fade(@color-swatch4, 0%);
+            z-index: 100000;
+            position: relative;
+
+            &:before {
+                top: 23px;
+                background: @color-swatch7;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+
+            }
+            &:after {
+                bottom: 21px;
+                background: @color-swatch7;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
         }
     }
 }
