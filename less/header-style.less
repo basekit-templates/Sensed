@@ -150,11 +150,29 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 
 
 
+// --------------
+// Brand
+// --------------
+
+.logo {
+  margin-right: 10px;
+  @media @tablet {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.company-link:hover {
+    color: @color__secondary;
+    text-decoration: none;
+}
+
+
+
+
 // ----------
 // Navigation
 // ----------
-
-
 
 // Folder, adds arrow icon
 .item-name--parent:after {
@@ -181,38 +199,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     }
 }
 
-// Navigation item
-.navigation-item {
-    @media @tablet {
-        opacity: 0;
-        .transform(@x:0, @y:5px);
-        .transition(@duration:1s, @ease:ease-in-out);
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-
-        z-index: 0;
-
-        .navigation-item:hover & {
-            display: block;
-        }
-    }
-}
-
-// Navigation item when nav is open
-.navigation-list.open {
-    .transform(@x:0, @y:0);
-
-    .navigation-item {
-        .transform(@x:0, @y:0);
-        display: block;
-        opacity: 1;
-    }
-}
-
-
-
-// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
+// Clears margin on ul
 .navigation-list {
     margin: 0;
     width: auto;
@@ -237,17 +224,6 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 
 .extendednavigation .item-name {
     padding: 4px 12px;
-}
-
-// Fix overlay in editor on tablet and mobile
-
-div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
-    @media @tablet {
-        width: 30%;
-        height: 44px;
-        top: -44px !important;
-        left: inherit !important;
-    }
 }
 
 
@@ -298,6 +274,35 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     opacity: 1;
     .transform(@x:0, @y:0);
     visibility: visible;
+}
+
+// Navigation item
+.navigation-item {
+    @media @tablet {
+        opacity: 0;
+        .transform(@x:0, @y:5px);
+        .transition(@duration:1s, @ease:ease-in-out);
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+
+        z-index: 0;
+
+        .navigation-item:hover & {
+            display: block;
+        }
+    }
+}
+
+// Navigation item when nav is open
+.navigation-list.open {
+    .transform(@x:0, @y:0);
+
+    .navigation-item {
+        .transform(@x:0, @y:0);
+        display: block;
+        opacity: 1;
+    }
 }
 
 // Hide toggle on desktop
@@ -432,6 +437,19 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 
 
 
+// Fix overlay in editor on tablet and mobile
+
+div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
+    @media @tablet {
+        width: 30%;
+        height: 44px;
+        top: -44px !important;
+        left: inherit !important;
+    }
+}
+
+
+
 // -----------------------------
 // Animations
 // -----------------------------
@@ -470,23 +488,3 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
 }
-
-
-// --------------
-// Brand
-// --------------
-
-.logo {
-  margin-right: 10px;
-  @media @tablet {
-    margin-right: 0;
-    margin-bottom: 5px;
-  }
-}
-
-.company-link:hover {
-    color: @color__secondary;
-    text-decoration: none;
-}
-
-
