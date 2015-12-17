@@ -181,16 +181,41 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     }
 }
 
+// Navigation item
+.navigation-item {
+    @media @tablet {
+        opacity: 0;
+        .transform(@x:0, @y:5px);
+        .transition(@duration:1s, @ease:ease-in-out);
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+
+        z-index: 0;
+
+        .navigation-item:hover & {
+            display: block;
+        }
+    }
+}
+
+// Navigation item when nav is open
+.navigation-list.open {
+    .transform(@x:0, @y:0);
+
+    .navigation-item {
+        .transform(@x:0, @y:0);
+        display: block;
+        opacity: 1;
+    }
+}
+
 
 
 // Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
 .navigation-list {
     margin: 0;
     width: auto;
-    @media @tablet {
-        display: none;
-        width: 100%;
-    }
 }
 
 // Sets background colour to navigation and dropdowns
