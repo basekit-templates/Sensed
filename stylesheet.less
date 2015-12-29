@@ -503,14 +503,18 @@ hr {
         width: auto;
         margin: 1em 0;
         padding: 0 20px;
-        border: 1px solid @color__feature-button--border;
+        border: 2px solid @color__feature-button--border;
         font-size: 18px;
         line-height: 28px;
         color: @color__feature-button--text;
         background-color: @color__feature-button--background;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
     }
     .button:hover {
-        border: 1px solid @color__feature-button--background--hover;
+        border: 2px solid fade(@color__feature-button--border, 50%);
+        color: fade(@color__feature-button--text, 50%);
     }
 }
 
