@@ -5,6 +5,7 @@
 // Template Imports
 // ----------------
 @import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+@import "@{templateLocal}/bk-v8-test.less";
 
 @import "@{templateLocal}/less/variables.less";         // Variables
 
@@ -371,19 +372,19 @@ a {
 .imagewidget {
     .image-title {
         font-family:@font-swatch8-font-family;
-        font-size:@font-swatch8-font-size;
-        font-weight: @font-swatch8-font-weight;
-        line-height:@font-swatch8-line-height;
-        color: @color__image-title--text;
-        letter-spacing: @font-swatch8-letter-spacing;
+        font-size:16px;
+        font-weight: 400;
+        line-height:26px;
+        color: @color-swatch4;
+        letter-spacing: inherit;
     }
     .image-description {
         font-family:@font-swatch9-font-family;
-        font-size:@font-swatch9-font-size;
-        font-weight: @font-swatch9-font-weight;
-        line-height:@font-swatch9-line-height;
-        color: @color__image-description--text;
-        letter-spacing: @font-swatch9-letter-spacing;
+        font-size:16px;
+        font-weight: 400;
+        line-height:26px;
+        color: @color-swatch5;
+        letter-spacing: inherit;
     }
 }
 
@@ -474,6 +475,19 @@ hr {
         display: table;
         width: 100%;
         background-size: cover;
+        // Overlay
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: @color__feature-content--background;
+            opacity: 0.4;
+        }
     }
     .content-wrap {
         position: relative;
@@ -481,7 +495,7 @@ hr {
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        background-color: rgba(0,0,0,0.3);
+        z-index: 99;
     }
     .headline {
         font-family: @font__feature-headline--font-family;

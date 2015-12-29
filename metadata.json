@@ -115,7 +115,7 @@
             "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch6",
-            "color-hover": "@color-swatch3",
+            "color-hover": "@color-swatch2",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch1",
             "background-color-hover": "@color-swatch1"
@@ -232,6 +232,7 @@
         "feature": {
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
+            "color__feature-content--background":"#000000",
             "color__feature-button--text": "@font-swatch8-color",
             "color__feature-button--border": "@font-swatch8-color",
             "color__feature-button--background": "transparent",
@@ -253,8 +254,8 @@
             "color__form-label--text": "@font-swatch3-color"
         },
         "image": {
-            "color__image-title--text": "@font-swatch8-color",
-            "color__image-description--text": "@font-swatch5-color"
+            "color__image-title--text": "@color-swatch4",
+            "color__image-description--text": "@color-swatch5"
         },
         "socialicons": {
             "color__socialicons--icon": "@color-swatch1"

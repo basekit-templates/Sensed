@@ -110,6 +110,30 @@
 
 
 
+// --------------
+// Brand
+// --------------
+
+.logo {
+  margin-right: 10px;
+  @media @tablet {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.company-link {
+    color: @color-swatch4;
+}
+
+.company-link:hover {
+    color: @color__secondary;
+    text-decoration: none;
+}
+
+
+
+
 // -------------------
 // Feature Full Height
 // -------------------
@@ -117,7 +141,6 @@
 div#page-zones__template-widgets__feature-featurehome {
     z-index: 0;
 }
-
 
 div#page-zones__template-widgets__feature-featurehome + .flex-container {
     position: absolute;
@@ -127,21 +150,37 @@ div#page-zones__template-widgets__feature-featurehome + .flex-container {
     border-bottom: none;
     margin-bottom: 0;
     .company-link {
-        color: @color-swatch3;
+        color: @color__companyname--text;
+        &:hover {
+            color: lighten(@color__navigation--text--hover, 30%);
+        }
     }
     .extendednavigation__item-name.item-name {
         color: @color__navigation--text;
         &:hover {
-            color: @color__navigation--text--hover;
+            color: lighten(@color__navigation--text--hover, 30%);
         }
     }
     .navigation-item.selected .item-name {
-        color: @color__navigation--text--selected;
+        color: lighten(@color__navigation--text--hover, 30%);
     }
-    .navigation-list--children {
-        background-color: transparent;
+    .item-name--parent:after {
+        @media only screen and (min-width : 769px) {
+            border-top-color: @color__navigation--text;
+        }
     }
-
+    .navigation-toggle {
+        &:before {
+            background: @color-swatch7;
+            box-shadow: 0 7px 0 @color-swatch7;
+        }
+        &:after {
+            background: @color-swatch7;
+        }
+    }
+    .open .navigation-toggle:before {
+        box-shadow: none;
+    }
 }
 
 div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-container {
@@ -159,26 +198,6 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 
 
 
-// --------------
-// Brand
-// --------------
-
-.logo {
-  margin-right: 10px;
-  @media @tablet {
-    margin-right: 0;
-    margin-bottom: 5px;
-  }
-}
-
-.company-link:hover {
-    color: @color__secondary;
-    text-decoration: none;
-}
-
-
-
-
 // ----------
 // Navigation
 // ----------
@@ -191,20 +210,23 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     margin-left: 4px;
     border: 5px solid transparent;
     border-top-color: @color__navigation--text;
+    @media only screen and (min-width : 769px) {
+        border-top-color: @color-swatch4;
+    }
 }
 .item-name--parent:hover:after {
     border-top-color: @color__navigation--text--selected;
     @media @tablet {
-        border-top-color: lighten(@color-swatch4, 40%);
+        border-top-color: lighten(@color__navigation--text--selected, 40%);
     }
 }
 
 // Selected nav item
 
-.navigation-item.selected > .item-name {
+.extendednavigation .navigation-item.selected > .item-name {
     color: @color__navigation--text--selected;
     @media @tablet {
-        color: lighten(@color__navigation--text--selected, 40%);
+        color: lighten(@color__navigation--text--hover, 30%);
     }
 }
 
@@ -216,7 +238,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 
 // Sets background colour to navigation and dropdowns
 
-.navigation-list--children {
+.extendednavigation .navigation-list--children {
     left: inherit;
     right: 0;
     white-space: normal;
@@ -233,6 +255,18 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 
 .extendednavigation .item-name {
     padding: 4px 12px;
+    color: @color__p--text;
+    &:hover {
+        color: @color__navigation--text--hover;
+    }
+    @media @tablet {
+        color: @color__navigation--text;
+        font-size: 20px;
+        line-height: 35px;
+        &:hover {
+            color: lighten(@color__navigation--text--hover, 30%);
+        }
+    }
 }
 
 
@@ -286,6 +320,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     padding: 0;
     position: relative;
     opacity: 1;
+    background-color: transparent;
     .transform(@x:0, @y:0);
     visibility: visible;
 }
@@ -351,8 +386,8 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
-            box-shadow: 0 7px 0 @color-swatch7;
+            background: @color-swatch4;
+            box-shadow: 0 7px 0 @color-swatch4;
             .transition(@duration:0.2s, @ease:ease-in-out);
         }
         &:after {
@@ -365,7 +400,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
+            background: @color-swatch4;
             .transition(@duration:0.2s, @ease:ease-in-out);
         }
         &:hover {
