@@ -76,6 +76,12 @@
 .flex-logo .logo-image {
     margin-right: 5px;
 }
+.flex-companyname .companyname {
+    @media @tablet {
+        max-width: 100%;
+        margin-right: 50px;
+    }
+}
 .flex-logo,
 .flex-companyname {
     -webkit-box-flex: 0;
@@ -83,12 +89,6 @@
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    @media @tablet {
-        max-width: 85%;
-    }
-    @media @mobile {
-        max-width: 65%;
-    }
 }
 
 // Navigation widget
