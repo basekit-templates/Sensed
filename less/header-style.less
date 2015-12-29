@@ -172,6 +172,11 @@ div#page-zones__template-widgets__feature-featurehome + .flex-container {
             border-top-color: @color__navigation--text;
         }
     }
+    .item-name--parent:hover:after {
+        @media only screen and (min-width : 1024px) {
+            color: lighten(@color__navigation--text--hover, 30%);
+        }
+    }
     .navigation-toggle {
         &:before {
             background: @color-swatch7;
