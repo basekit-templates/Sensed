@@ -219,7 +219,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 .item-name--parent:hover:after {
     border-top-color: @color__navigation--text--selected;
     @media only screen and (max-width : 1024px) {
-        border-top-color: lighten(@color__navigation--text--selected, 40%);
+        border-top-color: lighten(@color__navigation--text--hover, 30%);
     }
 }
 
@@ -262,13 +262,18 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     &:hover {
         color: @color__navigation--text--hover;
     }
-    @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
-        color: @color__navigation--text;
+    @media only screen and (min-width: 600px) and (max-width: 1024px) {
         font-size: 20px;
         line-height: 35px;
+    }
+    @media only screen and (max-width : 1024px) {
+        color: @color__navigation--text;
         &:hover {
             color: lighten(@color__navigation--text--hover, 30%);
         }
+    }
+    @media only screen and (max-width : 600px) {
+        padding: 8px 0;
     }
 }
 
@@ -299,8 +304,8 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
             overflow: auto;
         }
     }
-    @media @mobile {
-        padding: 90px 0 0 0;
+    @media only screen and (max-width : 600px) {
+        padding: 65px 0 0 0;
     }
 }
 
@@ -343,6 +348,14 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
         .navigation-item:hover & {
             display: block;
         }
+    }
+}
+
+.navigation-item,
+.navigation-item.folder {
+    @media only screen and (max-width : 1024px) {
+        width: 90%;
+        margin: 0 5%;
     }
 }
 
