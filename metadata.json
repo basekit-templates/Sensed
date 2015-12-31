@@ -258,7 +258,7 @@
             "color__image-description--text": "@color-swatch5"
         },
         "socialicons": {
-            "color__socialicons--icon": "@color-swatch1"
+            "color__socialicons--icon": "@color-swatch4"
         },
         "blog": {
             "color__blogsearch-legend--text": "@color__form-legend--text",
