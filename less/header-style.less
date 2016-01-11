@@ -155,11 +155,13 @@ div#page-zones__template-widgets__feature-featurehome + .flex-container {
     .extendednavigation__item-name.item-name {
         color: @color__navigation--text;
         &:hover {
-            color: lighten(@color__navigation--text--hover, 30%);
+            color: @color__navigation--text--hover;
+            text-decoration: underline;
         }
     }
     .navigation-item.selected .item-name {
-        color: lighten(@color__navigation--text--hover, 30%);
+        color: @color__navigation--text--selected;
+        text-decoration: underline;
     }
     .item-name--parent:after {
         @media only screen and (min-width : 1024px) {
@@ -168,7 +170,7 @@ div#page-zones__template-widgets__feature-featurehome + .flex-container {
     }
     .item-name--parent:hover:after {
         @media only screen and (min-width : 1024px) {
-            color: lighten(@color__navigation--text--hover, 30%);
+            color: @color__navigation--text--hover;
         }
     }
     .navigation-toggle {
@@ -212,12 +214,12 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     margin-left: 4px;
     border: 5px solid transparent;
     border-top-color: @color__navigation--text;
-    @media only screen and (min-width : 1024px) {
-        border-top-color: @color-swatch4;
+    @media only screen and (max-width : 1024px) {
+        border-top-color: @color__navigation--text;
     }
 }
 .item-name--parent:hover:after {
-    border-top-color: @color__navigation--text--selected;
+    border-top-color: @color-swatch4;
     @media only screen and (max-width : 1024px) {
         border-top-color: lighten(@color__navigation--text--hover, 30%);
     }
@@ -226,7 +228,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
 // Selected nav item
 
 .extendednavigation .navigation-item.selected > .item-name {
-    color: @color__navigation--text--selected;
+    color: @color-swatch4;
     @media only screen and (max-width : 1024px) {
         color: lighten(@color__navigation--text--hover, 30%);
     }
@@ -260,7 +262,7 @@ div#page-zones__template-widgets__feature-featurehome.bk-tpl-hidden + .flex-cont
     padding: 4px 12px;
     color: @color__p--text;
     &:hover {
-        color: @color__navigation--text--hover;
+        color: @color-swatch4;
     }
     @media only screen and (min-width: 600px) and (max-width: 1024px) {
         font-size: 20px;
