@@ -5,6 +5,7 @@
 // Template Imports
 // ----------------
 @import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+// @import "@{templateLocal}/bk-v8-test.less";
 
 @import "@{templateLocal}/less/variables.less";         // Variables
 
@@ -20,6 +21,19 @@
 @import "@{templateLocal}/less/plugin-ecommerce.less";
 
 @import "@{templateLocal}/less/mixins.less";
+
+
+
+// Fix homepae height in editor mode
+// ---------------------------------
+
+.html-home,
+.bk-pt-home.edit.site-iframe.touch {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 
 
 
