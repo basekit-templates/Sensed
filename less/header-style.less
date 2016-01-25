@@ -39,11 +39,6 @@
         -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        -webkit-box-align: flex-start;
-        -moz-box-align: flex-start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: flex-start;
-        align-items: flex-start;
     }
     @media @mobile {
         padding: 5%;
@@ -66,6 +61,9 @@
             -webkit-order: 3;
             -ms-flex-order: 3;
             order: 3;
+            -webkit-align-self: flex-start;
+            -ms-flex-item-align: start;
+            align-self: flex-start;
         }
         &.flex-logo {
             -webkit-box-ordinal-group: 2;
