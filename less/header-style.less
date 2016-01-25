@@ -52,6 +52,11 @@
     margin-bottom: 10px;
     @media only screen and (max-width : 1024px) {
         margin-bottom: 0;
+        &.flex-nav {
+            -webkit-align-self: flex-start;
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+        }
     }
     // Reorder items for desktop
     @media only screen and (min-width : 1024px) {
@@ -61,9 +66,6 @@
             -webkit-order: 3;
             -ms-flex-order: 3;
             order: 3;
-            -webkit-align-self: flex-start;
-            -ms-flex-item-align: start;
-            align-self: flex-start;
         }
         &.flex-logo {
             -webkit-box-ordinal-group: 2;
