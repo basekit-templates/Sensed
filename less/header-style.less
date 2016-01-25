@@ -36,6 +36,9 @@
     margin-bottom: 30px;
     @media only screen and (max-width : 1024px) {
         padding: 3% 5%;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     }
     @media @mobile {
         padding: 5%;
@@ -103,13 +106,6 @@
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    @media only screen and (max-width : 1024px) {
-        width: 100%;
-        .navigation-toggle {
-            height: 44px;
-            top: -35px;
-        }
-    }
 }
 
 
@@ -393,14 +389,10 @@
         .animation;
         // Displays as icon's middle bar
         display: inline-block;
-        position: absolute;
         height: 44px;
         width: 44px;
-        right: 0;
-        top: 0;
         text-indent: 1000px;
         overflow: hidden;
-        line-height: 0;
         background-color: transparent;
         z-index: 99999;
 
