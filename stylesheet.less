@@ -27,14 +27,12 @@
 // Fix homepae height in editor mode
 // ---------------------------------
 
-html.html-home,
-body.bk-pt-home.edit {
-    @media only screen and (max-width: 860px) {
-        position: relative;
-        height: 100%;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
+html,
+body.edit {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 
@@ -450,7 +448,7 @@ hr {
     }
 }
 
-// Sticky footer in default page
+// Sticky footer
 
 .bk-pt-default {
     display: -ms-flexbox;
@@ -530,9 +528,9 @@ hr {
         @media only screen and (min-width: 1024px) {
             height: 100vh;
         }
-        min-height: 600px;
+        min-height: 700px;
         @media only screen and (max-width: 600px) {
-            min-height: 300px;
+            min-height: 400px;
         }
     }
     .background-image {
