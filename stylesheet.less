@@ -438,10 +438,12 @@ hr {
 
 html.html-default,
 body.bk-pt-default.edit {
-    position: relative;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    @media @tablet {
+        position: relative;
+        height: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 // Sticky footer
