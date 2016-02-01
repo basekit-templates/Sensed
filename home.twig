@@ -2,6 +2,8 @@
 {% block class %}bk-pt-home{% endblock %}
 {% block content %}
 
+<div class="homepage-background">
+
     <!-- Theme Feature Widget -->
 
     {{widget('feature', 'featurehome', {
@@ -13,7 +15,6 @@
     })|raw}}
 
     <!-- Header Include -->
-
     {% include "includes/header.twig" %}
 
     <!-- Container -->
@@ -30,5 +31,10 @@
 
     </div>
     <!-- End Container -->
+
+    <!-- Footer Include -->
+    {% include "includes/footer.twig" %}
+
+</div>
 
 {% endblock %}
