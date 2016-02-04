@@ -5,6 +5,7 @@
 // Template Imports
 // ----------------
 @import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+
 // @import "@{templateLocal}/bk-v8-test.less";
 
 @import "@{templateLocal}/less/variables.less";         // Variables
@@ -437,20 +438,20 @@ hr {
 // Sticky footer for Desktop only
 
 body {
-    @media only screen and (max-width : 1024px) {
+    @media only screen and (max-width : 1025px) {
         background-color: darken(@color__body--background, 8%);
     }
 }
 
 .homepage-background {
-    @media only screen and (max-width : 1024px) {
+    @media only screen and (max-width : 1025px) {
         background-color: @color__body--background;
     }
 }
 
 .sticky-footer {
     background-color: @color__body--background;
-    @media only screen and (min-width : 1024px) {
+    @media only screen and (min-width : 1025px) {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
@@ -473,7 +474,7 @@ body {
     }
 }
 .sticky-footer .container {
-    @media only screen and (min-width : 1024px) {
+    @media only screen and (min-width : 1025px) {
         flex: 1;
         -webkit-box-flex: 1;
         -moz-box-flex: 1;
@@ -527,7 +528,7 @@ body {
 .feature {
     .background-image,
     .content-wrap {
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 1025px) {
             height: 100vh;
         }
         min-height: 680px;
