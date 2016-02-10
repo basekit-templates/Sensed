@@ -162,7 +162,7 @@
 // --------
 .menu .item-image .image-link,
 .menu .menu-item--featured .item-image .image-link {
-    background-color: @color-swatch7;
+    background-color: transparent;
     height: auto;
     line-height: normal;
     max-height: 350px;
@@ -218,6 +218,9 @@
 .menu-item--featured,
 .menu-section--featured {
     background-color: transparent;
+    .item-image .image-link {
+        background-color: transparent;
+    }
 }
 
 // Featured subsection

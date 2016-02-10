@@ -105,12 +105,13 @@ textarea,
     letter-spacing: @font__h3--letter-spacing;
 }
 
+legend,
 .legend {
     margin-bottom: 20px;
     font-size: @font__h3--font-size;
     font-weight: @font__h3--font-weight;
     line-height: @font__h3--line-height;
-    color: @font-swatch3-color;
+    color: @color__form-legend--text;
 }
 
 .contactform .legend {
@@ -133,13 +134,16 @@ textarea,
 }
 
 .label {
-    color: @font-swatch3-color;
+    color: @color__form-label--text;
     font-size: bkscale(@font__h3--font-size,0.7);
     line-height: bkscale(@font__h3--line-height,0.7);
 }
 
 // Hide Blog Label
 .blogsearch {
+    &__legend.legend {
+        color: @color__blogsearch-legend--text;
+    }
     .label {
         display: none;
     }
@@ -546,6 +550,11 @@ button,
     min-height: 44px;
     padding: 8px 20px;
     .transition( all, 0.5s, ease );
+    color: @color__button--text;
+    background-color: @color__button--background;
+    &:hover {
+        background-color: @color__button--background--hover;
+    }
     @media @mobile {
         width: 100%;
         text-align: center;

@@ -24,9 +24,9 @@
 @import "@{templateLocal}/less/mixins.less";
 
 
-
+// -----------------------------
 // Template Styles
-// ---------------
+// -----------------------------
 
 .bk-pt-home .container {
     margin-top: 3em;
@@ -36,11 +36,45 @@
 }
 
 // -----------------------------
-// Links
+// TYPOGRAPHY
 // -----------------------------
 
+.company-link {
+    color: @color__companyname--text;
+    font-family: @font__companyname--font-family;
+    font-size: @font__companyname--font-size;
+    font-weight: @font__companyname--font-weight;
+    line-height: @font__companyname--line-height;
+    letter-spacing: @font__companyname--letter-spacing;
+    @media only screen and (max-width : 600px) {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
+}
+
 a {
+    color: @color__link--text;
     .transition( all, 0.5s, ease );
+}
+
+h1 {
+    color: @color__h1--text;
+}
+
+h2 {
+    color: @color__h2--text;
+}
+
+h3 {
+    color: @color__h3--text;
+}
+
+h4 {
+    color: @color__h4--text;
+}
+
+p {
+    color: @color__p--text;
 }
 
 
@@ -673,6 +707,7 @@ body {
 
 .social-link {
     padding: 5px;
+    color: @color__socialicons--icon;
 }
 
 // Social icons colour
