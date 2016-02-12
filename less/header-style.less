@@ -46,7 +46,6 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    margin-bottom: 10px;
     @media only screen and (max-width : 1024px) {
         margin-bottom: 0;
         &.flex-nav {
@@ -103,6 +102,9 @@
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     min-height: 44px;
+    @media only screen and (max-width : 600px) {
+        min-height: inherit;
+    }
 }
 
 // Navigation widget
