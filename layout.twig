@@ -34,7 +34,7 @@
         <script src="{{ asset('js/clickable.js')}}"></script>
 
         <!-- Nav Menu & Blog Search Script -->
-        <script>
+        <script nonce="{{ numberUsedOnce }}">
 
             // Nav
             $( ".navigation-toggle" ).click(function() {
@@ -58,7 +58,7 @@
         <!-- Masonry -->
         <script src="{{asset('js/masonry.min.js')}}"></script>
 
-        <script>
+        <script nonce="{{ numberUsedOnce }}">
             var container = document.querySelector('.post-items');
 
             if (container) {
