@@ -43,7 +43,7 @@
             });
 
             // Toggles class open to add noscroll to body
-            $( ".navigation-toggle" ).click(function() {
+            $(document).on("click", ".navigation-toggle", function() {
                 $( "body" ).toggleClass( "noscroll" );
             });
 
