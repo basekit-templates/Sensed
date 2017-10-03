@@ -274,10 +274,6 @@
     top: 0;
 }
 
-.navigation-list {
-    overflow: scroll;
-}
-
 // Sets background colour to navigation and dropdowns
 
 .extendednavigation .navigation-list--children {
@@ -327,6 +323,7 @@
 .navigation-list {
     @media only screen and (max-width : 1024px) {
         position: fixed;
+        overflow: scroll;
         left: 0;
         top: 0;
         height: 100vh;
