@@ -254,7 +254,7 @@
 // Selected nav item
 
 .extendednavigation .navigation-item.selected > .item-name {
-    color: lighten(@color__p--text, 10%);
+    color: @color__p--text;
     @media only screen and (max-width : 1024px) {
         color: lighten(@color__navigation--text--hover, 30%);
     }
@@ -302,7 +302,7 @@
     padding: 4px 12px;
     color: @color__p--text;
     &:hover {
-        color: lighten(@color__p--text, 10%);
+        color: @color__p--text;
     }
     @media only screen and (min-width: 600px) and (max-width: 1024px) {
         font-size: 20px;
