@@ -12,8 +12,55 @@
 
 
     .container,
-    .templater-footer {
+    .template-footer {
         margin-top: 0;
+    }
+
+
+    .flex-container {
+        margin-bottom: 0;
+    }
+
+
+    .container #page-zones__main > [data-name="row"] {
+        margin: 0 auto;
+        width: 100%;
+
+
+        &.height--no-padding .row__container > .widget {
+            margin-top: 0;
+        }
+
+        .widget {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
+
+    .blogpostlist .read-more:after {
+        background: transparent;
+        bottom: 10px;
+        color: inherit;
+        line-height: initial;
+        height: auto;
+        right: 16px;
+        width: auto;
+    }
+
+
+    [data-name="row"] .social-link {
+        padding: 6px 12px;
+
+        &:before {
+            margin-right: 0;
+        }
+    }
+
+
+    [data-name="row"] .slide-navigation .pause-toggle {
+        margin-right: 0;
     }
 
 
@@ -30,6 +77,10 @@
         margin-left: auto;
         margin-right: auto;
         width: 90%;
+
+        @media only screen and (min-width: 1140px) {
+            width: 960px;
+        }
     }
 
 
