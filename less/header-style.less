@@ -326,6 +326,10 @@
 // Nav in Tablet & Mobile
 // -----------------------------
 
+.navigation-background() when not (@color__navigation-list--background = transparent) {
+    background-color: @color__navigation-list--background;
+}
+
 .navigation-list {
     @media only screen and (max-width : 1024px) {
         position: fixed;
@@ -335,13 +339,10 @@
         height: 100vh;
         width: 100%;
         .transform(@y:-100%, @x:0);
-
-
         z-index: 2;
-
         padding: 150px 100px;
         background-color: @color-swatch4;
-        background-color: @color__navigation-list--background;
+        .navigation-background();
 
         // Allows scrolling on mobile
         &.open {
