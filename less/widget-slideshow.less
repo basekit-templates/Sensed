@@ -73,14 +73,6 @@
 // --------------------
 
 .slide-navigation {
-    // Same height as images
-    min-height: 400px;
-    @media @tablet {
-        min-height: 300px;
-    }
-    @media @mobile {
-        min-height: 200px;
-    }
     // Removes button text
     .control-text {
         display: none;
@@ -94,9 +86,9 @@
 @media only screen and (min-width:480px) {
     .slide-navigation {
         position: absolute;
-        top: 0;
         width: 100%;
         margin: 0;
+        top: ~"calc(50% - 40px)";
         .button {
             color: @color__body--background;
             padding: 0;
